@@ -1,49 +1,53 @@
-## ✨ Features
+✨ Features
+🔐 Steganography
+Hide Text: Embed secret text data inside images.
+Hide Files: Compress and hide multiple files within an image.
+Hide Videos: Conceal video files (e.g., MP4, AVI, MOV) in images.
+Extract Hidden Content: Seamlessly retrieve hidden text, files, folders, or videos using a password.
 
-### 🕵️ Steganography
-- **Hide Text**  
-  Securely embed secret messages into images.
-- **Hide Files & Folders**  
-  Compress and hide multiple files or entire folders inside images.
-- **Hide Videos**  
-  Conceal video files like `.mp4`, `.avi`, or `.mov` using image carriers.
-- **Extract Hidden Data**  
-  Retrieve hidden content with the correct password – supports text, files, folders, and videos.
-- **Data Update & Clear**  
-  Update or erase previously hidden data within images.
+🔏 Encryption Tools
+AES-256 GCM Encryption: Secure password-based encryption.
+File Encryption: Encrypt files while preserving the original filename.
+Text Encryption: Convert plaintext into AES-encrypted Base64 strings.
 
-### 🔒 Encryption Tools
-- **AES-256-GCM Encryption**  
-  Encrypt and decrypt text and files using military-grade AES encryption.
-- **Secure Password Protection**  
-  All hidden/encrypted content is locked with a user-defined password.
-- **File Name Preservation**  
-  Original file names are kept even after encryption and recovery.
+🖼️ Image Handling
+Load, preview, and update images.
+Create new blank images as data carriers.
+Revert images to original state and clear hidden data.
 
-### 🖼️ Image Operations
-- **Create Blank Carriers**  
-  Generate new blank images (custom dimensions) to use as stego-carriers.
-- **Preview & Update**  
-  Instantly preview and update images with embedded content.
-- **Image Format Support**  
-  Works with PNG, JPG, JPEG, BMP images.
+📋 Clipboard Support
+Copy/paste text and images between the app and system clipboard.
 
-### 🧰 File Management
-- **Built-in File Explorer**  
-  Navigate local files and folders inside the app.
-- **Drag & Drop Editor**  
-  Drop files or text directly into the editor for hiding.
-- **Automatic Cleanup**  
-  All temporary files are tracked and deleted when the app closes.
+📁 File Management
+Built-in file explorer panel.
+Drag-and-drop friendly text editor.
+Automatic temporary file handling and cleanup.
 
-### 📋 Clipboard Support
-- **Copy/Paste**  
-  Use the clipboard to quickly copy/paste text or images into and from the app.
+🧪 Background Workers
+Encoding/decoding processes run in background threads for a smooth experience.
+Real-time progress updates.
 
-### 📊 Progress Monitoring
-- **Real-time Progress Bar**  
-  Visual feedback during encryption, decryption, and steganography processes.
+🔧 Technologies Used
+Python 3.10
+PyQt5 – GUI framework
+Pillow (PIL) – Image processing
+PyCryptodome – AES-GCM encryption
+Zipfile – File compression for hiding
 
-### 🧵 Background Workers
-- **Multithreaded Processing**  
-  All heavy operations run in background threads for a lag-free UI experience.
+📦 Output
+The output is a .png image file containing encrypted hidden content.
+It remains a valid image while secretly storing data retrievable only with a password.
+
+🔒 Security Design
+Uses PBKDF2 for key derivation and AES-256-GCM for encryption and authentication.
+Data is appended in the image using LSB steganography.
+Special binary marker (1111111111111110) signifies the end of hidden data.
+
+Install Dependencies:
+pip install pyqt5 pillow pycryptodome
+
+## 🧑‍💻 Author
+Muhammad Shahzaib (https://github.com/muhammadshahzaib-student)
+
+📸 Screenshot
+![image](https://github.com/user-attachments/assets/152a07a6-5a04-4bc3-a128-5b206b5687e3)
